@@ -1,0 +1,27 @@
+# Raw source documents — belong to benchmark corpora, not the schema
+sources/raw/*.txt
+sources/raw/*.html
+sources/raw/*.pdf
+sources/raw/*.docx
+sources/raw/*.csv
+sources/raw/*.json
+sources/raw/*.md
+!sources/raw/README.md
+
+# Generated knowledge — produced by agents, not part of the void scaffold
+entities/
+concepts/
+playbooks/
+synthesis/
+
+# Generated Formation artifacts
+sources/intake/*.md
+!sources/intake/README.md
+sources/source-*.md
+
+# Obsidian local config
+.obsidian/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
