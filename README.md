@@ -68,3 +68,13 @@ The wiki inflates from void. Each cycle enriches it further.
 - Not a wiki with content — it is the schema to build one
 - Not tied to any domain — works with technical docs, research papers, runbooks, codebases, or any structured source material
 - Not a finished product — it is a void scaffold, ready to inflate
+
+---
+
+## Inspiration
+
+This project was directly inspired by a post by [Andrej Karpathy](https://x.com/karpathy/status/2039805659525644595) describing how he uses LLMs to build personal knowledge bases:
+
+> *"raw data from a given number of sources is collected, then compiled by an LLM into a .md wiki, then operated on by various CLIs by the LLM to do Q&A and to incrementally enhance the wiki, and all of it viewable in Obsidian. You rarely ever write or edit the wiki manually, it's the domain of the LLM. I think there is room here for an incredible new product instead of a hacky collection of scripts."*
+
+Constellation-wiki is an attempt at that product — a formalized, schema-driven, multi-agent architecture that turns the pattern Karpathy described into a reproducible, contract-governed system. The roles of Builder, Reviewer, and Evaluator replace the "hacky collection of scripts" with structured agents that communicate only through the filesystem and operate under explicit normative contracts.
