@@ -55,5 +55,8 @@ If the remote source is reachable, Runtime MUST generate:
 - `sources/source-{logical_name}.md`
 
 If the remote source is unreachable, Runtime MUST:
+- append a blocker record to `absorb_log.json`
 - not generate the canonical manifest
+- not generate the intake artifact
+- not update [[index]]
 - append the reachability issue to [[log]]

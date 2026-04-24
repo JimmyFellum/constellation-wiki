@@ -17,6 +17,8 @@
 - Reviewer MUST report a Builder traceability finding when scope cannot be derived.
 - Reviewer MUST return `pass/no-op` and MUST NOT review older scope when the latest Formation record is `operation: no-op`.
 - Reviewer MUST append a Reviewer `no-op` entry to `absorb_log.json` and MUST NOT change [[log]] when reviewing a `no-op` scope.
+- If the latest non-evaluation Formation record contains blockers and no reviewable source or page scope, Reviewer MUST append a Reviewer `no-op` entry to `absorb_log.json` and stop.
+- Reviewer MUST NOT report a traceability finding for an unreachable remote bootstrap recorded in Formation.
 
 ---
 

@@ -13,6 +13,19 @@ Related notes:
 - Runtime MUST NOT edit files or directories in this folder.
 - Runtime MUST NOT treat files in this folder as canonical manifests.
 
+## Local Source Unit
+
+- Each top-level entry in `sources/raw/`, except `README.md`, is one local raw source.
+- A top-level file is one source.
+- A top-level directory is one source.
+- Files inside a top-level source directory belong to that source and are not separate sources by default.
+
+Examples:
+
+- `sources/raw/doc.txt` -> one local source
+- `sources/raw/harness-engineering/` -> one local source
+- `sources/raw/sub-a/` and `sources/raw/sub-b/` -> two local sources
+
 ## Local Bootstrap Flow
 
 For each new or changed local source, Runtime MUST:

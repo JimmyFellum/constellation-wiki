@@ -19,6 +19,7 @@ Ignore evaluation records when selecting the review scope.
 Read the artifacts identified by that scope.
 For Content QC, read declared source evidence only when needed to detect under-enrichment.
 If the latest Formation record is `operation: no-op`, append a Reviewer no-op to `absorb_log.json`, return `pass/no-op`, and do not review older scope.
+If the latest non-evaluation Formation record contains blockers and no reviewable source or page scope, append a Reviewer no-op to `absorb_log.json`, return `pass/no-op`, and stop.
 
 Do not edit files under `sources/raw/`.
 Do not generate new Constellation knowledge from raw sources.
@@ -41,7 +42,9 @@ Each Builder request MUST include:
 - requested_by: `reviewer`
 
 Return:
-- pass/fail
+- pass
+- fail
+- pass/no-op
 - checks run
 - findings
 - corrections applied
