@@ -26,3 +26,10 @@ sources/source-*.md
 .DS_Store
 Thumbs.db
 benchmark/runs/
+benchmark/sandboxes/
+benchmark/pipeline/__pycache__/
+benchmark-codex/runs/*
+!benchmark-codex/runs/README.md
+benchmark-codex/sandboxes/*
+!benchmark-codex/sandboxes/README.md
+benchmark-codex/pipeline/__pycache__/
